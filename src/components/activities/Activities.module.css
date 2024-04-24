@@ -1,0 +1,138 @@
+.activities {
+    display: flex;
+    padding: 20px 80px;
+    gap: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-basis: 25%;
+}
+
+.left h1 {
+    font-size: 55px;
+    font-weight: 400;
+    color: rgb(21, 21, 70);
+}
+
+.first_p {
+    font-size: 18px;
+    color: grey;
+    position: relative;
+}
+
+.first_p::after {
+    content: '';
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    right: 37%;
+    background: rgb(90, 179, 90);
+}
+
+.second_p {
+    font-size: 20px;
+}
+
+.right {
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 190px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.right>div {
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    /* Ensure text is above the background image */
+}
+
+.right>div button {
+    padding: 10px 30px;
+    border: 2px solid white;
+    margin-top: 20px;
+    background: rgb(90, 179, 90);
+    font-size: 17px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.right img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+    background: grey;
+}
+
+.left_icon,
+.right_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.left_icon {
+    left: -15px;
+    font-size: 25px;
+}
+
+.right_icon {
+    right: -15px;
+    font-size: 25px;
+}
+
+
+.right_icon,
+.left_icon {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+@media (max-width: 768px) {
+    .activities {
+        flex-direction: column;
+        box-shadow: 0 0 20px grey;
+    }
+
+    .activities .right {
+        padding: 10px;
+    }
+
+    .right h1 {
+        font-size: 20px;
+    }
+
+    .left h1 {
+        font-size: 33px;
+    }
+
+    .first_p::after {
+        left: 0;
+        top: 100%;
+        bottom: -10px;
+        width: 100%;
+    }
+}

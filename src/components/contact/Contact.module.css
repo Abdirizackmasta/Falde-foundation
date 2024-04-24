@@ -1,0 +1,265 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact .div_1 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(66, 60, 60, 0.5), rgba(0, 0, 0, 0.5)), url('contactus.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+    color: #fff;
+}
+
+.contact .div_1 h1 {
+    font-size: 44px;
+    position: relative;
+}
+
+.contact .div_1 p {
+    font-size: 22px;
+}
+
+.contact .div_1 h1::after {
+    content: '';
+    width: 200px;
+    height: 3px;
+    position: absolute;
+    right: 60%;
+    top: 50%;
+    background: rgb(240, 77, 77);
+
+}
+
+.contact .div_1 span {
+    color: rgb(240, 77, 77);
+    text-transform: uppercase;
+}
+
+.div_2 {
+    padding: 30px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: white;
+    background: linear-gradient(to bottom right, white 0%, white 33%, brown 33%, brown 66%, black 66%, black 100%);
+
+}
+
+.div_2 div {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 40px;
+}
+
+.div_2 div:nth-child(1),
+.div_2 div:nth-child(2) {
+    border-right: 1px solid rgb(189, 189, 189);
+}
+
+.icon_div {
+    width: 100px;
+    padding: 30px;
+    height: 100px;
+    display: block;
+    background: rgb(199, 198, 198);
+    border-radius: 50%;
+    color: red;
+}
+
+.div_3 {
+    display: flex;
+    padding: 30px 100px;
+}
+
+
+
+.div3_left {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.upperleft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.upperleft h1 {
+    font-size: 55px;
+    font-weight: 500;
+    text-shadow: 0 0 10px grey;
+}
+
+.upperleft_firstp {
+    font-size: 17px;
+    color: grey;
+    position: relative;
+}
+
+.upperleft_firstp::after {
+    content: '';
+    height: 2px;
+    width: 150px;
+    background: rgb(240, 77, 77);
+    position: absolute;
+    top: 50%;
+    right: 70px;
+}
+
+.upperleft_secondp {
+    font-size: 23px;
+    font-weight: 200;
+}
+
+.leftLower {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    text-decoration: none;
+    font-size: 44px;
+}
+
+.lowericons {
+    width: 80px;
+    padding: 20px;
+    height: 80px;
+    display: block;
+    background: rgb(199, 198, 198);
+    border-radius: 50%;
+    color: rgb(240, 77, 77);
+    transition: all 0.7s;
+}
+
+.lowericons:hover {
+    background: rgb(240, 77, 77);
+    color: rgb(199, 198, 198);
+}
+
+.div3_right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 60px;
+
+}
+
+.div3_right form input {
+    width: 350px;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    background: rgb(238, 237, 237);
+    box-shadow: 0 0 20px rgb(236, 234, 234);
+    outline: none;
+    color: rgb(139, 138, 138);
+    font-size: 14px;
+}
+
+.div3_right form button {
+    padding: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.div3_right form label {
+    margin-bottom: -15px;
+}
+
+.div3_right form textarea {
+    resize: none;
+    height: 200px;
+    border: none;
+    background: rgb(238, 237, 237);
+    box-shadow: 0 0 20px rgb(236, 234, 234);
+    outline: none;
+    color: rgb(139, 138, 138);
+    padding: 20px;
+    font-size: 16px;
+}
+
+@media(max-width: 768px) {
+    .contact .div_1 h1 {
+        font-size: 24px;
+    }
+
+    .contact .div_1 {
+        padding: 0 30px;
+        gap: 30px;
+    }
+
+    .contact .div_1 p {
+        font-size: 16px;
+    }
+
+    .contact .div_1 h1::after {
+        width: 100%;
+        top: 100%;
+        bottom: -10px;
+        left: 0;
+        height: 1px;
+    }
+
+    .icon_div {
+        width: 50px;
+        padding: 10px;
+        height: 50px;
+        display: block;
+        background: rgb(199, 198, 198);
+        border-radius: 50%;
+        color: red;
+    }
+
+    .div_2 {
+        flex-direction: column;
+    }
+
+    .div_2 div:nth-child(1),
+    .div_2 div:nth-child(2) {
+        border: none;
+    }
+
+    .div_3 {
+        flex-direction: column;
+    }
+
+    .div3_right form {
+        gap: 10px;
+        padding: 0 30px;
+
+    }
+
+    .div3_right form input {
+        width: 100%;
+    }
+
+    .div_3 {
+
+        padding: 10px;
+    }
+
+    .upperleft h1 {
+        font-size: 33px;
+    }
+
+    .upperleft p {
+        font-size: 16px;
+    }
+}

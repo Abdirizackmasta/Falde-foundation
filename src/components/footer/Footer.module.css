@@ -1,0 +1,261 @@
+.footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgb(30, 20, 54);
+    /* background-image: radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.5) 10%, transparent 10%);
+    background-size: 20px 20px; */
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(230, 222, 222);
+    padding: 20px;
+    padding: 20px 80px;
+    /* position: sticky;
+    bottom: -33px;
+    width: 100%; */
+
+
+}
+
+.upper_footer {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    border-bottom: 0.6px solid #ffffff;
+    padding-bottom: 20px;
+}
+
+.upper_footer h1 {
+    font-size: 23px;
+    color: rgb(230, 221, 221);
+}
+
+.upper_footer div {
+    flex-basis: 22%;
+}
+
+.upper_footer img {
+    width: 150px;
+    background-color: rgb(93, 139, 93);
+}
+
+
+
+.second ul {
+    list-style-type: none;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.second ul li {
+    position: relative;
+}
+
+.second ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.second ul li a:hover {
+    color: orange;
+    transition: all 0.6s;
+    transform: scale(1.1);
+    transform-origin: top left;
+}
+
+.third {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.third a {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(230, 222, 222);
+}
+
+.third a:hover {
+    color: orange;
+}
+
+.icon {
+    color: rgb(13, 44, 13);
+}
+
+.fourth {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fourth h1 {
+    border: 0.5px solid grey;
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fourth h1:hover {
+    color: orange;
+    transition: all 0.6s;
+    transform: scale(1.1);
+    transform-origin: top left;
+}
+
+.fourth p {
+    font-size: 17px;
+    color: grey;
+}
+
+.fourth button {
+    display: flex;
+    gap: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    width: fit-content;
+    font-weight: bold;
+    font-size: 17px;
+    background: rgb(62, 100, 62);
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.heart {
+    /* font-size: 14px; */
+    color: red;
+    background-color: white;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.fourth button:hover {
+    cursor: pointer;
+}
+
+.fourth a {
+    text-decoration: none;
+}
+
+.lower_footer {
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower_right {
+    display: flex;
+    gap: 15px;
+}
+
+.lower_footer div p a {
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.lower_footer div p a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: all 0.6s;
+}
+
+.lower_footer div p a:hover::after {
+    width: 100%;
+}
+
+.lower_right a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(37, 36, 36);
+    border: 1px solid grey;
+    transition: all 0.5s;
+}
+
+.lower_right a:hover {
+    border: 1px solid rgb(37, 36, 36);
+    background-color: white;
+    color: black;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        padding: 20px;
+        padding-left: 60px;
+    }
+
+    .upper_footer {
+        flex-direction: column;
+    }
+
+    .first {
+        padding-right: 150px;
+    }
+
+    .first p {
+        font-size: 15px;
+
+    }
+
+    .first img {
+        width: 100px;
+        background: #ffffff;
+    }
+
+    .second ul li a {
+        font-size: 15px;
+    }
+
+    .lower_footer p {
+        font-size: 15px;
+    }
+
+    .third a {
+        font-size: 15px;
+    }
+
+    .second h1,
+    .third h1 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .second h1::after,
+    .third h1::after {
+        content: '';
+        background: rgb(243, 242, 241);
+        width: 100%;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        height: 1px;
+    }
+
+    .lower_right a {
+        display: none;
+    }
+}

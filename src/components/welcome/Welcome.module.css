@@ -1,0 +1,110 @@
+.welcome {
+    display: flex;
+    background: rgb(248, 248, 247);
+    padding: 20px 80px;
+}
+
+.welcome a {
+    text-decoration: none;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 60px;
+    flex-basis: 40%;
+    border: 1px solid rgb(226, 222, 222);
+    align-items: center;
+
+}
+
+.left .welcome_img {
+    width: 80%;
+}
+
+.left button {
+    width: 200px;
+    display: block;
+    border: none;
+    background: white;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.first_p {
+    color: gray;
+    font-size: 19px;
+    position: relative;
+}
+
+.first_p::after {
+    content: '';
+    height: 2px;
+    background: rgb(90, 179, 90);
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    width: 100px;
+}
+
+.right h1 {
+    font-size: 56px;
+    color: rgb(90, 179, 90);
+    font-weight: 500;
+    text-shadow: 0 0 10px grey;
+}
+
+.right .second_p {
+    color: grey;
+    line-height: 25px;
+}
+
+.right button {
+    width: 200px;
+    padding: 20px 0;
+    border: none;
+    background: rgb(90, 179, 90);
+    font-weight: bold;
+    color: white;
+}
+
+@media(max-width: 768px) {
+    .welcome {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .welcome {
+        padding: 15px 40px;
+    }
+
+    .first_p {
+        font-size: 16px;
+    }
+
+    .first_p::after {
+        top: 100%;
+        bottom: -10px;
+        right: 0;
+        width: 100%;
+    }
+
+    .right {
+        gap: 30px;
+    }
+
+    .right h1 {
+        font-size: 36px;
+        line-height: 43px;
+    }
+}
