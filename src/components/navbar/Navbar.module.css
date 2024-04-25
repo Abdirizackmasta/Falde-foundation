@@ -78,9 +78,6 @@
     transition: all 0.7s;
 }
 
-
-
-
 .nav_lower ul li a:hover {
     color: orange;
     font-size: 20px;

@@ -26,15 +26,15 @@ function Footer() {
                 </div>
                 <div className={styles.third}>
                     <h1>Contact</h1>
-                     <a href="tel:+1234567890">
+                     <a href="tel:+254 722 778749">
                         <span>< IoCall className={styles.icon}/></span>
-                        <span>+254718880089</span>
+                        <span>+254 722 778749</span>
                     </a>
                     
 
-                    <a href="mailto:abdirizackissack2018@gmail.com">
+                    <a href="mailto:faldefoundation@gmail.com">
                         <span>< SiGmail className={styles.icon}/></span>
-                        <span>abdi@gmail.com</span>
+                        <span>faldefoundation@gmail.com</span>
                     </a>
                     
                 </div>

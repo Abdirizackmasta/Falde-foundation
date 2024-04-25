@@ -29,11 +29,11 @@ function Navbar() {
           <p>Welcome to Falde Foundation</p>
 
           <a
-            href={`mailto:abdirizackissack2018@gmail.com`}
+            href={`mailto:faldefoundation@gmail.com`}
             className={styles.email_link}
           >
             <MdEmail className={styles.email_icon} />
-            abdirizackissack2018@gmail.com
+            faldefoundation@gmail.com
           </a>
         </div>
         <div className={styles.right_upper}>
@@ -62,7 +62,7 @@ function Navbar() {
         <img src="/mainlogo.jpg" alt="" />
         </Link>
         <div>
-          <ul style={getMenuStyles(openMenu)} ref={menuRef}>
+          <ul style={getMenuStyles(openMenu)} ref={menuRef} className={styles.nav_items}>
             <li>
                 <Link to='/'>Home</Link>
             </li>

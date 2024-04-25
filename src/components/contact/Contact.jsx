@@ -35,7 +35,7 @@ function Contact() {
                 </div>
                 <div>
                     <FaPhoneAlt className={styles.icon_div}/>
-                    <p>+254 769 862 273</p>
+                    <p>+254 722 778749</p>
                 </div>
             </motion.div>
             <div className={styles.div_3}>

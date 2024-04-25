@@ -20,15 +20,20 @@
 .div_1 h1 {
     font-size: 55px;
     position: relative;
+    font-weight: bold;
+    background: rgb(187, 187, 144);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
 }
 
 .div_1 h1::after {
     content: '';
-    height: 3px;
-    width: 75%;
+    height: 1px;
+    width: 17%;
     position: absolute;
     top: 70%;
-    right: 35px;
+    right: 60%;
     background: #000;
 }
 
