@@ -7,7 +7,7 @@ import useHeaderShadow from "../../hooks/UseHeaderShadow";
 import { FaBars } from "react-icons/fa6";
 import {  Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import { getMenuStyles, headerVariants } from "../../utils/motion";
+import { getMenuStyles } from "../../utils/motion";
 import useOutsideAlerter from "../../hooks/UseOutsideAlerter";
 
 

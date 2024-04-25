@@ -1,6 +1,5 @@
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
-import {  useState } from 'react';
+import { useState, useEffect } from 'react'; // Import useEffect
 import { motion } from 'framer-motion'; 
 import styles from './Hero.module.css';
 
@@ -21,10 +20,17 @@ function Hero() {
   const [heroInfo, setHeroInfo] = useState(0);
   const detail = heroDetails[heroInfo];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Calculate the next index by taking modulo with the length of heroDetails
+      setHeroInfo(prevIndex => (prevIndex + 1) % heroDetails.length);
+    }, 3000); // Execute every 2 seconds
 
-  
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
   return (
-    <div  className={styles.hero} id="hero">
+    <div className={styles.hero} id="hero">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -32,13 +38,12 @@ function Hero() {
         viewport={{ once: false, amount: 0.25 }}
         className={styles.hero_item}
       >
-        <motion.img  variants={slideIn("left", "tween", 0.5, 1.2)} src={detail.image} alt='NGO' />
+        <motion.img variants={slideIn("left", "tween", 0.5, 1.2)} src={detail.image} alt='NGO' />
         <div>
           <motion.h1 variants={fadeIn("right", "tween", 0.9, 1)}>{detail.boldText}</motion.h1>
           <motion.p variants={fadeIn("left", "tween", 0.4, 1)}>{detail.smallText}</motion.p>
         </div>
       </motion.div>
-      
     </div>
   );
 }

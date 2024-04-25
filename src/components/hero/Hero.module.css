@@ -1,6 +1,7 @@
 .hero {
     height: 500px;
     padding: 20px 30px;
+    transition: all 0.5s;
 }
 
 .hero_item {
