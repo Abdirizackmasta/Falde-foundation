@@ -232,6 +232,12 @@
         font-size: 15px;
     }
 
+    .lower_footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
     .third a {
         font-size: 15px;
     }
@@ -255,7 +261,5 @@
         height: 1px;
     }
 
-    .lower_right a {
-        display: none;
-    }
+
 }

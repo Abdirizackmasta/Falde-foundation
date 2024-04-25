@@ -76,3 +76,9 @@
 
 
 }
+
+@media(max-width: 500px) {
+    .founder {
+        flex-direction: column;
+    }
+}
