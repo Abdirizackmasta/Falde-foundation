@@ -263,6 +263,10 @@
         width: 100%;
     }
 
+    .div_3 form label {
+        margin-bottom: 10px;
+    }
+
     .div_3 {
 
         padding: 10px;

@@ -99,6 +99,10 @@
         font-size: 33px;
     }
 
+    .div_2 {
+        flex-direction: column;
+    }
+
     .p1::after {
         width: 100%;
         bottom: -10px;

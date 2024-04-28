@@ -8,8 +8,6 @@ import { TbTrees } from "react-icons/tb";
 import { BsPeopleFill } from "react-icons/bs";
 import { HiOfficeBuilding } from "react-icons/hi";
 import styles from "./Whatwedo.module.css";
-import { fadeIn, staggerContainer } from "../../utils/motion";
-import { motion } from 'framer-motion'; 
 
 
 
@@ -64,28 +62,23 @@ function Whatwedo() {
   const currentFocusArea = focusArea[focusAreaIndex];
 
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={styles.whatwedo} id="areaoffocus">
+    <div className={styles.whatwedo} id="areaoffocus">
       <div className={styles.left}>
-        <motion.p variants={fadeIn("left", "tween", 0.4, 1)} className={styles.first_p}>What We Do</motion.p>
-        <motion.h1 variants={fadeIn("right", "tween", 0.9, 1)}>Our Focus Area</motion.h1>
-        <motion.p variants={fadeIn("left", "tween", 0.4, 1)} className={styles.second_p}>
+        <p className={styles.first_p}>What We Do</p>
+        <h1>Our Focus Area</h1>
+        <p className={styles.second_p}>
           Falde Foundation focuses on environmental conservation, education
           access, youth development, good governance, and peace promotion
-        </motion.p>
+        </p>
       </div>
       <div className={styles.right}>
-        <motion.h1 variants={fadeIn("right", "tween", 0.9, 1)}>{currentFocusArea.head}</motion.h1>
-        <motion.p variants={fadeIn("left", "tween", 0.4, 1)}>{currentFocusArea.description}</motion.p>
-        <motion.i variants={fadeIn("right", "tween", 0.9, 1)}>{currentFocusArea.icon}</motion.i>
+        <h1>{currentFocusArea.head}</h1>
+        <p>{currentFocusArea.description}</p>
+        <i>{currentFocusArea.icon}</i>
         <IoIosArrowBack onClick={goToPreviousHero} className={styles.left_icon} />
         <IoIosArrowForward onClick={goToNextHero} className={styles.right_icon} />
       </div>
-    </motion.div>
+    </div>
   );
 }
 

@@ -2,8 +2,7 @@ import { useState } from 'react';
 import styles from './Activities.module.css';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
-import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
-import { motion } from 'framer-motion'; 
+
 
 const ourActivities = [
     {
@@ -48,28 +47,24 @@ function Activities() {
     };
 
     return (
-        <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
+        <div
             className={styles.activities}>
             <div className={styles.left}>
-                <motion.p  variants={fadeIn("right", "tween", 0.9, 1)} className={styles.first_p}>Our task</motion.p>
-                <motion.h1 variants={fadeIn("left", "tween", 0.4, 1)}>Some of impactful activities</motion.h1>
-                <motion.p variants={fadeIn("right", "tween", 0.9, 1)} className={styles.second_p}>We’re working in partnership for results that last</motion.p>
+                <p   className={styles.first_p}>Our task</p>
+                <h1 >Some of impactful activities</h1>
+                <p  className={styles.second_p}>We’re working in partnership for results that last</p>
             </div>
             <div className={styles.right}>
                 <div>
-                    <motion.h1 variants={fadeIn("left", "tween", 0.4, 1)}>{activity.heading}</motion.h1>
-                    <motion.p variants={fadeIn("right", "tween", 0.9, 1)}>{activity.details}</motion.p>
-                    <Link to='/latestactivities'><motion.button variants={fadeIn("right", "tween", 0.9, 1)}>{activity.button}</motion.button></Link>
+                    <h1>{activity.heading}</h1>
+                    <p>{activity.details}</p>
+                    <Link to='/latestactivities'><button>{activity.button}</button></Link>
                 </div>
-                <motion.img variants={slideIn("right", "tween", 0.5, 1.2)} src={activity.image} alt="" />
+                <img src={activity.image} alt="" />
                 <IoIosArrowBack onClick={goToPreviousHero} className={styles.left_icon} />
                 <IoIosArrowForward onClick={goToNextHero} className={styles.right_icon} />
             </div>
-        </motion.div>
+        </div>
     );
 }
 

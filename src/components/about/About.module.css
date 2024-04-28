@@ -177,8 +177,14 @@
 }
 
 @media(max-width: 768px) {
+    .div_1 {
+        padding: 10px;
+        background: white;
+    }
+
     .div_1 h1 {
         font-size: 33px;
+        margin-bottom: 15px;
     }
 
     .div_1 h1::after {

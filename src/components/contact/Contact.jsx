@@ -6,7 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 import { motion } from 'framer-motion'; 
 
 
@@ -43,7 +43,7 @@ function Contact() {
                     <div className={styles.upperleft}>
                         <p className={styles.upperleft_firstp}>Get In Touch</p>
                         <h1>Love to hear from you</h1>
-                        <p className={styles.upperleft_secondp}>We're here to help and answer any question you might have. We look forward to hearing from you</p>
+                        <p className={styles.upperleft_secondp}>We are here to help and answer any question you might have. We look forward to hearing from you</p>
                     </div>
                     <div className={styles.leftLower}>
                         <Link><FaFacebookF className={styles.lowericons}/></Link> 
