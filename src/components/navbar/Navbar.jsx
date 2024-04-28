@@ -66,7 +66,7 @@ function Navbar() {
             <li>
                 <Link to='/'>Home</Link>
             </li>
-            <li><Link to='/about'>Who Are We</Link></li>
+            <li><Link to='/about'>About Us</Link></li>
             <li><Link to='/latestactivities'>Our Activities</Link></li>
             <li><Link to='/contact'>Contact Us</Link></li>
           </ul>

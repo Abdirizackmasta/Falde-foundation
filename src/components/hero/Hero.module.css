@@ -43,9 +43,9 @@
 }
 
 .hero_item div p {
-    background-color: rgba(243, 240, 240, 0.815);
+    /* background-color: rgba(243, 240, 240, 0.815); */
     padding: 5px;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 @media(max-width: 768px) {
