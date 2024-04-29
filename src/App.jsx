@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
@@ -12,11 +12,22 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import TheTeam from './components/theteam/TheTeam';
 import LatestActivities from './components/latestactivties/LatestActivities';
+import Loader from './components/Loader/Loader';
 
 function App() {
+   const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 5000);
+    }, []);
+
   return (
     <BrowserRouter>
       <div>
+        {loading ? (<Loader />) : (
+          <main>
+
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,6 +37,10 @@ function App() {
           <Route path="/latestactivities" element={<LatestActivities />} />
         </Routes>
         <Footer />
+        
+          </main>
+            )
+        }
       </div>
     </BrowserRouter>
   );
@@ -44,3 +59,13 @@ function Home() {
 }
 
 export default App;
+
+//  <div>
+//       {loading ? (<Loading />) :
+//                 (
+//                     <main>
+//                         <Nav />
+//                     </main>
+//                 )
+//         }
+//   </div>

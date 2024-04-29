@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Activities.module.css';
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 
