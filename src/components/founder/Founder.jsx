@@ -12,7 +12,7 @@ function Founder() {
             <div
                 className={styles.right}>
                 <div className={styles.founder_quote}>
-                    I’m humbled to welcome and record my sincere gratitude to all Foundation’s Stakeholders (Partners, Donors, Communities, Local and National Authorities, Institutions etc.) It’s my pleasure to recognize the contributions of the Foundation’s Executive Board, community elders, Management Team, staff for their hard work and dedication to ensure that the Foundation’s Mission, Goals and Objectives are realized.
+                    Greetings good People My name is Falhada Dekow Iman born and bred in Masalani, Ijara Constituency Garissa County. As you are aware our County and region is marginalized and when we grew up we were exposed to a myriad of challenges and poverty that affects more the girl child. We were exposed to vices and handicaps but in the midst of all these we pulled through successfully. I hereby invite you and our development partners to walk with Falde in this journey to bring and stir up empowerment and development for the women and youth of our region. Asante sana and Karibu to Falde, Hit us up!
                 </div>
                 <div className={styles.right_low}>
                     <p className={styles.upper_p}>

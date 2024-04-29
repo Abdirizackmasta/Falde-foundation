@@ -24,7 +24,7 @@ function About() {
                 <div className={styles.div2_details}>
                         <p>Rebuilding a Stable, Cohesive, and Resilient Nation</p>
                         <h1>Welcome</h1>
-                        <p>Falde Foundation is a startup NGO dedicated to contributing towards rebuilding a stable, cohesive, and resilient nation. Our mission is to address critical challenges facing our society through targeted initiatives in environmental conservation, education, youth development, good governance, and peace promotion. This strategic plan outlines our vision, goals, objectives, and action plans for the next five years, focusing on making a positive impact in the communities we serve.</p>
+                        <p>FALDE FOUNDATION is a registered society under the laws of Kenya with its headquarters based in Nairobi. Through their community roots and outreach, Falde seeks among its objectives, to be the change-maker in some of the handicaps in Garissa County and the larger Northern Region.</p>
                 </div>
                 <div className={styles.div2_img}>
                         <img src="./hero1.jpeg" alt="" />

@@ -40,7 +40,7 @@ function Contact() {
                     </div>
                     <div className={styles.leftLower}>
                         <Link><FaFacebookF className={styles.lowericons}/></Link> 
-                        <Link><FaInstagram  className={styles.lowericons}/></Link> 
+                        <Link to='https://www.instagram.com/falde_foundation/'><FaInstagram  className={styles.lowericons}/></Link> 
                         <Link><FaXTwitter  className={styles.lowericons}/></Link> 
                        
                     </div>

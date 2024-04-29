@@ -62,6 +62,7 @@
     align-items: center;
     gap: 40px;
     padding: 20px 40px;
+    -webkit-text-stroke: 1px #534242;
 }
 
 .div_2 div:nth-child(1),

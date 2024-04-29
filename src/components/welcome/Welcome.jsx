@@ -15,7 +15,7 @@ function Welcome() {
             <div className={styles.right}>
                 <p className={styles.first_p}>Rebuilding a Stable, Cohesive, and Resilient Nation</p>
                 <h1>Welcome to Falde Foundation</h1>
-                <p className={styles.second_p}>Falde Foundation is a startup NGO dedicated to contributing towards rebuilding a stable, cohesive, and resilient nation. Our mission is to address critical challenges facing our society through targeted initiatives in environmental conservation, education, youth development, good governance, and peace promotion.</p>
+                <p className={styles.second_p}>FALDE FOUNDATION is a registered society under the laws of Kenya with its headquarters based in Nairobi. Through their community roots and outreach, Falde seeks among its objectives,to be the change-maker in some of the handicaps in Garissa County and the larger Northern Region.</p>
                 <Link to='/about'><button>More Information</button></Link>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
+import { fadeIn, staggerContainer } from "../../utils/motion";
 import { useState, useEffect } from 'react'; // Import useEffect
 import { motion } from 'framer-motion'; 
 import styles from './Hero.module.css';
@@ -38,7 +38,7 @@ function Hero() {
         viewport={{ once: false, amount: 0.25 }}
         className={styles.hero_item}
       >
-        <motion.img variants={slideIn("left", "tween", 0.5, 1.2)} src={detail.image} alt='NGO' />
+        <img src={detail.image} alt='NGO' />
         <div>
           <motion.h1 variants={fadeIn("right", "tween", 0.9, 1)}>{detail.boldText}</motion.h1>
           <motion.p variants={fadeIn("left", "tween", 0.4, 1)}>{detail.smallText}</motion.p>
