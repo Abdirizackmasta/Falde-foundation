@@ -249,6 +249,10 @@
         border: none;
     }
 
+    .leftLower {
+        gap: 20px;
+    }
+
     .div_3 {
         flex-direction: column;
     }

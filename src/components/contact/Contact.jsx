@@ -6,24 +6,17 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import { fadeIn, staggerContainer } from "../../utils/motion";
-import { motion } from 'framer-motion'; 
 
 
 function Contact() {
     return (
-        <motion.div className={styles.contact}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-        >
+        <div className={styles.contact}>
             <div className={styles.div_1}>
-                <motion.h1 variants={fadeIn("right", "tween", 0.9, 1)}>Contact  <span>us</span></motion.h1>
-                <motion.p variants={fadeIn("left", "tween", 0.4, 1)}>Send us your questions about membership, partnerships, events and more..</motion.p>
+                <h1>Contact  <span>us</span></h1>
+                <p>Send us your questions about membership, partnerships, events and more..</p>
             </div>
-            <motion.div
-                variants={fadeIn("right", "tween", (1 + 1) * 0.2, 1)}
+            <div
+                
                 className={styles.div_2}>
                 <div>
                    <CgMailOpen className={styles.icon_div}/>
@@ -37,7 +30,7 @@ function Contact() {
                     <FaPhoneAlt className={styles.icon_div}/>
                     <p>+254 722 778749</p>
                 </div>
-            </motion.div>
+            </div>
             <div className={styles.div_3}>
                 <div className={styles.div3_left}>
                     <div className={styles.upperleft}>
@@ -67,7 +60,7 @@ function Contact() {
                 </div>
             </div>
             
-        </motion.div>
+        </div>
     )
 }
 
