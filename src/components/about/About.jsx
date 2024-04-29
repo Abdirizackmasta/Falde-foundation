@@ -53,17 +53,7 @@ function About() {
                     </span>
                 </div>
             </div>
-            <div className={styles.fourth}>
-                <p className={styles.fourth_firstp}>Our Strategies</p>
-                <h1>How We Implement Our Programmes & Projects</h1>
-                <ul>
-                    <li>Establish project teams and assign responsibilities for each objective.</li>
-                    <li>Set up a monitoring and evaluation framework to track progress and measure impact.</li>
-                    <li>We seek collaborations and partnerships with government agencies, NGOs, and private sector organizations.</li>
-                    <li>Secure funding through grants, donations, and fundraising events.</li>
-                    <li>Conduct periodic reviews and adjust strategies as needed to stay relevant and responsive to emerging challenges.</li>
-                </ul>
-            </div>
+            <div className={styles.fourth}></div>
         </motion.div>
     )
 }
