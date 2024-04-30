@@ -42,7 +42,7 @@ function Footer() {
                 <div className={styles.fourth}>
                     <p>Making a difference</p>
                     <h1><FaArrowDown /></h1>
-                    <Link to='contact'> <button><p>Donate Now</p><FaHeart  className={styles.heart} /></button></Link>
+                    <Link to='/donate'> <button><p>Donate Now</p><FaHeart  className={styles.heart} /></button></Link>
                 </div>
             </div>
             <div className={styles.lower_footer}>
