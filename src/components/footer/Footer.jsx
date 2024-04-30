@@ -41,7 +41,7 @@ function Footer() {
                 </div>
                 <div className={styles.fourth}>
                     <p>Making a difference</p>
-                    <h1>Donate <FaArrowDown /></h1>
+                    <h1><FaArrowDown /></h1>
                     <Link to='contact'> <button><p>Donate Now</p><FaHeart  className={styles.heart} /></button></Link>
                 </div>
             </div>

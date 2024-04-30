@@ -72,7 +72,7 @@ function Navbar() {
           </ul>
         </div>
          <FaBars className={styles.bar} onClick={() => setMenuOpen((prev) => !prev)}/>
-        <Link to='contact'><button>Get involved</button></Link>
+        <Link to='/donate'><button>Get involved</button></Link>
       </div>
     </nav>
   );

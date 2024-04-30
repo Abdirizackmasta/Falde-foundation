@@ -12,12 +12,11 @@ function Contact() {
     return (
         <div className={styles.contact}>
             <div className={styles.div_1}>
+                <img src="/contactus.jpeg" alt="" />
                 <h1>Contact  <span>us</span></h1>
                 <p>Send us your questions about membership, partnerships, events and more..</p>
             </div>
-            <div
-                
-                className={styles.div_2}>
+            <div className={styles.div_2}>
                 <div>
                    <CgMailOpen className={styles.icon_div}/>
                     <p>faldefoundation@gmail.com</p>

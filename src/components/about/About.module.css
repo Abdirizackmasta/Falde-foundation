@@ -1,20 +1,32 @@
 .about {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .about .div_1 {
     position: relative;
     width: 100%;
     height: 400px;
-    background: linear-gradient(rgba(66, 60, 60, 0.5), rgba(0, 0, 0, 0.5)), url('blackandwhite.jpeg');
+    background: linear-gradient(rgba(66, 60, 60, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 100px;
+    position: relative;
+}
+
+.about_bg_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .6;
+    z-index: -22;
 }
 
 .div_1 h1 {
@@ -23,8 +35,13 @@
     font-weight: bold;
     background: rgb(187, 187, 144);
     background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1px #000;
+    color: #ffffff;
+    -webkit-text-stroke: 1px rgb(126, 92, 92);
+}
+
+.hero_p {
+    color: #ffffff;
+    /* -webkit-text-stroke: .7px rgb(0, 0, 0); */
 }
 
 .div_1 h1::after {
@@ -34,13 +51,14 @@
     position: absolute;
     top: 70%;
     right: 60%;
-    background: #000;
+    background: #ffffff;
 }
 
 .div_2 {
     display: flex;
     padding: 30px 60px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    height: 300px;
 
 }
 
@@ -64,7 +82,7 @@
     right: -15px;
     width: 100px;
     height: 2px;
-    background: grey;
+    background: rgb(139, 137, 137);
 }
 
 .div2_details h1 {
@@ -80,8 +98,9 @@
 }
 
 .div2_img img {
-    width: 70%;
+    width: 90%;
     position: absolute;
+    height: 90%;
     top: 50px;
     left: -20px;
     transition: all 0.6s;
@@ -141,40 +160,6 @@
     padding: 20px;
 }
 
-.fourth {
-    background: rgb(243, 242, 242);
-    padding: 30px 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-
-.fourth_firstp,
-.fourth h1 {
-    text-align: center;
-}
-
-.fourth_firstp {
-    color: rgb(75, 73, 73);
-    font-size: 19px;
-    position: relative;
-}
-
-.fourth_firstp::after {
-    content: '';
-    background: gray;
-    height: 2px;
-    width: 150px;
-    position: absolute;
-    top: 50%;
-    right: 31%;
-}
-
-.fourth h1 {
-    font-size: 55px;
-    font-weight: 400;
-}
 
 @media(max-width: 768px) {
     .div_1 {
@@ -198,11 +183,13 @@
 
     .div_2 {
         flex-direction: column;
+        gap: 30px;
+        padding: 20px;
     }
 
-    .div2_img {
+    /* .div2_img {
         position: fixed;
-    }
+    } */
 
     .div2_details p:nth-child(1)::after {
         width: 105%;
@@ -221,6 +208,7 @@
 
     .div_3 {
         flex-direction: column;
+        padding: 20px;
     }
 
     .div_3 div span {

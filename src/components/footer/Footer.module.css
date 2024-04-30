@@ -40,7 +40,9 @@
     background-color: rgb(93, 139, 93);
 }
 
-
+.second h1 {
+    margin-bottom: 10px;
+}
 
 .second ul {
     list-style-type: none;
@@ -202,8 +204,8 @@
 
 @media(max-width: 768px) {
     .footer {
-        padding: 20px;
-        padding-left: 60px;
+        padding: 30px;
+        /* padding-left: 0px; */
     }
 
     .upper_footer {

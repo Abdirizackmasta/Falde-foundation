@@ -13,6 +13,7 @@ import Contact from './components/contact/Contact';
 import TheTeam from './components/theteam/TheTeam';
 import LatestActivities from './components/latestactivties/LatestActivities';
 import Loader from './components/Loader/Loader';
+import Donate from './components/donate/Donate';
 
 function App() {
    const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<TheTeam />} />
           <Route path="/latestactivities" element={<LatestActivities />} />
+          <Route path='/donate' element={<Donate />}/>
         </Routes>
         <Footer />
         
@@ -59,13 +61,3 @@ function Home() {
 }
 
 export default App;
-
-//  <div>
-//       {loading ? (<Loading />) :
-//                 (
-//                     <main>
-//                         <Nav />
-//                     </main>
-//                 )
-//         }
-//   </div>

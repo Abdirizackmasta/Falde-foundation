@@ -76,6 +76,7 @@
     background: rgb(90, 179, 90);
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 @media(max-width: 768px) {
