@@ -63,12 +63,11 @@ function Navbar() {
         </Link>
         <div>
           <ul style={getMenuStyles(openMenu)} ref={menuRef} className={styles.nav_items}>
-            <li>
-                <Link to='/'>Home</Link>
-            </li>
+            <li><Link to='/'>Home</Link> </li>
             <li><Link to='/about'>About Us</Link></li>
             <li><Link to='/latestactivities'>Our Activities</Link></li>
             <li><Link to='/contact'>Contact Us</Link></li>
+            <li><Link to='/upcoming'>Upcoming events</Link></li>
           </ul>
         </div>
          <FaBars className={styles.bar} onClick={() => setMenuOpen((prev) => !prev)}/>

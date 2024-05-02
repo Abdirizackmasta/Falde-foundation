@@ -1,5 +1,11 @@
+.founder_container {
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+}
+
 .founder {
-    padding: 20px 80px;
+    flex-basis: 50%;
+    padding: 20px;
     display: flex;
     background-color: rgb(90, 179, 90);
 }
@@ -9,27 +15,23 @@
 }
 
 .left img {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid grey;
+    clip: rect(0px, 300px, 150px, 0px)
 }
 
 .right {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-right: 200px;
-    /* padding: 20px 80px; */
-    padding-left: 40px;
-    padding-top: 10px;
 }
 
 .founder_quote {
-    font-size: 20px;
-    line-height: 40px;
-    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
     color: white;
 }
 
@@ -42,7 +44,7 @@
     color: rgb(218, 213, 213);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     font-size: 18px;
 }
 
@@ -63,6 +65,10 @@
 
     .founder {
         padding: 10px;
+    }
+
+    .founder_container {
+        flex-direction: column;
     }
 
     .founder_quote {

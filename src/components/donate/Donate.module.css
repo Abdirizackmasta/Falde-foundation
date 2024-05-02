@@ -88,15 +88,13 @@
 
 .social {
     display: flex;
-    align-items: center;
     justify-content: center;
+    vertical-align: text-top;
     gap: 3px;
     font-size: 17px;
+    border: 1px dashed grey;
 }
 
-.social i {
-    color: green;
-}
 
 .third {
     display: flex;

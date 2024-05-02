@@ -3,9 +3,20 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('team.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.div_1 img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -22;
+    opacity: .3;
 }
 
 .p1 {

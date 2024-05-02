@@ -83,10 +83,6 @@
     font-size: 20px;
 }
 
-/* .nav_lower div ul li a:hover::after {
-    width: 100%;
-    transition: width 0.6s;
-} */
 
 .nav_lower button {
     padding: 15px 30px;
@@ -168,7 +164,7 @@
         position: absolute;
         top: 7.4%;
         right: 9%;
-        height: 200px;
+        /* height: 200px; */
         width: 30%;
         padding: 12px;
         font-size: 18px;
@@ -183,13 +179,13 @@
     .nav_lower div ul {
         top: 7.4%;
         right: 49px;
-        height: 150px;
+        /* height: 150px; */
         width: 40%;
         padding: 12px;
         font-size: 14px;
         font-weight: 300;
         border-radius: 10px;
-
+        padding: 6px;
     }
 
 }
