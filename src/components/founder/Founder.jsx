@@ -16,8 +16,8 @@ function Founder() {
                     </div>
                     <div className={styles.right_low}>
                         <p className={styles.upper_p}>
-                            <span className={styles.bold}>Hon Falhado D. Iman</span>
-                            <span>Chairperson & Member of Parliament EALA</span>
+                            <span className={styles.bold}>Hon Falhada Dekow Iman</span>
+                            <span>Chairperson</span>
                         </p>
                         <p><RiDoubleQuotesR className={styles.icon}/></p>
                     </div>
@@ -35,8 +35,8 @@ function Founder() {
                     </div>
                     <div className={styles.right_low}>
                         <p className={styles.upper_p}>
-                            <span className={styles.bold}>Halima Mohamed Bulle(Hafsa)</span>
-                            <span>Director</span>
+                            <span className={styles.bold}>Hafsa Mohamed</span>
+                            <span>Director and Founder</span>
                         </p>
                         <p><RiDoubleQuotesR className={styles.icon}/></p>
                     </div>
