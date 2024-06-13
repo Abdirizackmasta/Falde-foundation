@@ -9,7 +9,6 @@ function Welcome() {
             className={styles.welcome}>
             <div className={styles.left}>
                 <img  src="/welcome.jpeg" alt="" className={styles.welcome_img} />
-                <Link to='/about'><button>READ MORE</button></Link>
 
             </div>
             <div className={styles.right}>

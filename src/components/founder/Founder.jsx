@@ -23,25 +23,6 @@ function Founder() {
                     </div>
                 </div>
             </div>
-            <div
-                className={styles.founder}>
-                <div className={styles.left}>
-                    <img  src="/haphsa.jpeg" alt="" />
-                </div>
-                <div
-                    className={styles.right}>
-                    <div className={styles.founder_quote}>
-                        Local problems require local solutions, dealing with these challenges that we undergo in our society requires deliberate and intentional effort by development partners to stand up to their commitment as Flade we will be counted as part of the problem solvers to the inadequancies that the youth and women undergo in our region as such we call all and sundry to partner with us as we impact positive growth to North Eastern Region and beyond
-                    </div>
-                    <div className={styles.right_low}>
-                        <p className={styles.upper_p}>
-                            <span className={styles.bold}>Hafsa Mohamed</span>
-                            <span>Director and Founder</span>
-                        </p>
-                        <p><RiDoubleQuotesR className={styles.icon}/></p>
-                    </div>
-                </div>
-            </div>
         </div>
         
     )
