@@ -39,8 +39,13 @@ function Navbar() {
         <div className={styles.right_upper}>
           <ul>
             <li>
-              <a href="">
+              <a href="https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d">
                 <IoLogoFacebook />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/falde_foundation/">
+                <FaInstagram />
               </a>
             </li>
             <li>
@@ -48,11 +53,7 @@ function Navbar() {
                 <FaXTwitter />
               </a>
             </li>
-            <li>
-              <a href="">
-                <FaInstagram />
-              </a>
-            </li>
+           
 
           </ul>
         </div>

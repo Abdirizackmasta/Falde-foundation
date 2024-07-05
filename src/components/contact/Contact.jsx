@@ -38,7 +38,7 @@ function Contact() {
                         <p className={styles.upperleft_secondp}>We are here to help and answer any question you might have. We look forward to hearing from you</p>
                     </div>
                     <div className={styles.leftLower}>
-                        <Link><FaFacebookF className={styles.lowericons}/></Link> 
+                        <Link to='https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d'><FaFacebookF className={styles.lowericons}/></Link> 
                         <Link to='https://www.instagram.com/falde_foundation/'><FaInstagram  className={styles.lowericons}/></Link> 
                         <Link><FaXTwitter  className={styles.lowericons}/></Link> 
                        
