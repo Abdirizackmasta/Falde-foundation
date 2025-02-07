@@ -47,7 +47,7 @@ function Footer() {
             </div>
             <div className={styles.lower_footer}>
                 <div>
-                    <p>© 2024 – Falde Foundation – All rights reserved. Design By <a href="https://abdirizack-masta.netlify.app/">Masta Tech</a>.</p>
+                    <p>{new Date().getFullYear()} – Falde Foundation – All rights reserved. Design By <a href="https://abdirizack-masta.netlify.app/">Masta Tech</a>.</p>
                 </div>
                 <div className={styles.lower_right}>
                     <Link to='https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d'><FaFacebookF /></Link>

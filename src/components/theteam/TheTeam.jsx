@@ -7,8 +7,8 @@ function TheTeam() {
             <div className={styles.div_1}>
                 <img src="/team.jpg" alt="" />
                 <p className={styles.p1}>Meet our team</p>
-                <h1>FPF Founders & Leadership</h1>
-                <p className={styles.p2}>FPF leadership is dedicated to our mission and to continuing the legacy of innovation to help people build better lives and more durable futures.</p>
+                <h1>Falde Foundation Founders & Leadership</h1>
+                <p className={styles.p2}>Falde Foundation leadership is dedicated to our mission and to continuing the legacy of innovation to help people build better lives and more durable futures.</p>
             </div>
             <div className={styles.div_2}>
                 <div>
