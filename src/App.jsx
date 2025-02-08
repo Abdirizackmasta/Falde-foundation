@@ -19,6 +19,7 @@ import Environmental from './components/environmental/Environmental';
 import Maradasa from './components/madarasa/Maradasa';
 import Inspiring from './components/inspiring/Inspiring';
 import Feeding from './components/feeding/Feeding';
+import ScrollToTop from './hooks/ScrollToTheTop';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <main>
 
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

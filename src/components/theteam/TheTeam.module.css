@@ -1,23 +1,20 @@
+/* General Styling */
+.the_team {
+    font-family: "Poppins", sans-serif;
+}
+
+/* 📌 Optimized Background Image */
 .div_1 {
     padding: 40px 80px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-image: url("/team.jpg"); /* Uses background-image instead of an <img> */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    font-family: "Poppins", serif;
-}
-
-.div_1 img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -22;
-    opacity: .3;
+    text-align: center;
 }
 
 .p1 {
@@ -26,127 +23,119 @@
     position: relative;
 }
 
+/* 🔹 Cleaner Divider Under 'Meet our Team' */
 .p1::after {
     content: '';
     position: absolute;
-    width: 150px;
+    width: 100px;
     height: 2px;
     background: rgb(189, 187, 187);
-    right: 75%;
-    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
 }
 
+/* Title & Description */
 .div_1 h1 {
-    font-size: 55px;
+    font-size: 50px;
     color: rgb(20, 20, 20);
 }
 
 .p2 {
-    font-size: 22px;
+    font-size: 18px; /* Reduced for better readability */
     color: rgb(26, 25, 25);
+    line-height: 1.5;
 }
 
+/* 🔥 Optimized Team Member Section */
 .div_2 {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    
-    }
-    
-    .div_2 div {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 44%;
-        gap: 10px;
-        padding: 20px 40px;
-        align-items: center;
-        color: grey;
-        transition: all 0.6s;
-        border-radius: 10px;
-        border: 1px grey dashed;
 }
 
+/* 🔹 Improved Card Styling */
+.div_2 div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 44%;
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    color: grey;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
 
+/* 🖼️ Optimized Image for Performance */
 .div_2 div img {
-    height: 200px;
-    width: 200px;
+    max-width: 150px;
+    height: auto;
     border-radius: 50%;
     border: 1px solid grey;
     object-fit: cover;
 }
 
+/* 🔥 Removed Heavy Shadows */
 .div_2 h1 {
     font-size: 27px;
-    font-weight: 400;
-    color: rgb(191, 191, 196);
-    text-shadow: 0 0 33px grey;
+    font-weight: 500;
+    color: rgb(50, 50, 50);
     position: relative;
 }
 
-.div2_p2 {
-    text-align: center;
-    margin-bottom: 18px;
-}
-
+/* 📌 Position Label */
 .position {
     font-size: 19px;
+    font-weight: bold;
 }
 
+/* 🔵 Verified Icon */
 .icon {
     color: blue;
-    font-size: 22px;
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-50%);
+    font-size: 20px;
+    position: relative;
+    top: 3px;
 }
 
-.div_2 div:hover {
-    border: 3px solid grey;
-}
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .div_1 {
+        padding: 20px;
+    }
 
-@media(max-width: 768px) {
     .div_1 h1 {
-        font-size: 33px;
+        font-size: 35px;
+    }
+
+    .p1::after {
+        width: 80px;
+    }
+
+    .p2 {
+        font-size: 16px;
     }
 
     .div_2 {
         flex-direction: column;
     }
 
-    .p1::after {
-        width: 100%;
-        bottom: -10px;
-        left: 0;
-        top: 100%;
-        height: 1px;
-    }
-
-    .p2 {
-        font-size: 19px;
+    .div_2 div {
+        flex-basis: 100%;
+        padding: 15px;
     }
 
     .div_2 div img {
-        height: 150px;
-        width: 150px;
+        max-width: 100px;
     }
 
     .div_2 div h1 {
-        font-size: 17px;
-        margin-left: 0;
-    }
-
-    .div_2 div {
-        padding: 5px;
-
-    }
-
-    .div2_p2 {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .icon {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
