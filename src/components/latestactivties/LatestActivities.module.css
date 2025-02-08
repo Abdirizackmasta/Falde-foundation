@@ -50,7 +50,7 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding:50px 20px;
     flex-wrap: wrap;
 }
 .lower a img{
@@ -102,11 +102,7 @@
     font-size: 34px;
     }
 }
-@media(max-width: 1100px){
-    .lower{
-        padding: 20px;
-    }
-}
+
 @media(max-width: 900px){
     .upper{
         padding: 40px 60px;
