@@ -96,12 +96,8 @@
     .welcome {
         display: flex;
         flex-direction: column-reverse;
+        padding: 20px;
     }
-
-    .welcome {
-        padding: 15px 40px;
-    }
-
     .first_p {
         font-size: 16px;
     }

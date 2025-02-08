@@ -19,7 +19,7 @@ function Hero() {
           <div>
               <h1>Falde Foundation: the advocate for inspiration and change so nature and people thrive</h1> 
             <p>Rebuilding Stable, Cohesive, and Resilient Nation Together through provision of Equal access to quality Education</p>
-            <Link>See our activities &gt;</Link>
+            <Link to='latestactivities'>See our activities &gt;</Link>
           </div>
         </div>
         <div className={styles.hero_right}>
