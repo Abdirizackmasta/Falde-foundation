@@ -6,6 +6,13 @@ import { Link } from 'react-router-dom';
 
 
 const ourActivities = [
+     {
+        heading: 'Supporting Education through the establishment of madarasa',
+        details: 'Empowering the Community Through Education: Falde Foundation’s Dedication to Learning and Growth',
+        image: '/withschoolgirls.jpeg',
+        button: 'view more details'
+
+    },
     {
         heading: 'Food Donation to homes in Kenya',
         details: 'reaching to to vulnerable and needy homes to enhance food security',
@@ -26,12 +33,6 @@ const ourActivities = [
         image: '/withschoolgirls.jpeg',
         button: 'view more details'
 
-    },
-    {
-        heading: 'Giving Books to Schools',
-        details: 'Donating books to schools as a way to support education and literacy',
-        image: '/withschoolgirls.jpeg',
-        button: 'view more details'
     }
 ];
 

@@ -15,6 +15,11 @@ import LatestActivities from './components/latestactivties/LatestActivities';
 import Loader from './components/Loader/Loader';
 import Donate from './components/donate/Donate';
 import TakePart from './components/takepart/TakePart';
+import Environmental from './components/environmental/Environmental';
+import Maradasa from './components/madarasa/Maradasa';
+import Inspiring from './components/inspiring/Inspiring';
+import Feeding from './components/feeding/Feeding';
+
 
 function App() {
    const [loading, setLoading] = useState(true);
@@ -37,6 +42,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<TheTeam />} />
           <Route path="/latestactivities" element={<LatestActivities />} />
+          <Route path="/enviromental" element={<Environmental />} />
+          <Route path="/madarasa" element={<Maradasa />} />
+          <Route path="/inspiring" element={<Inspiring />} />
+          <Route path="/feeding-the-community" element={<Feeding />} />
           <Route path='/upcoming' element={<Donate />}/>
           <Route path='/donate' element={<TakePart />}/>
         </Routes>

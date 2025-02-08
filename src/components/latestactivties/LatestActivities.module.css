@@ -1,7 +1,7 @@
 .upper {
     width: 100%;
     height: 200px;
-    /* background: linear-gradient(rgba(66, 60, 60, 0.5), rgba(0, 0, 0, 0.5)), url('treeplanting.jpeg'); */
+    font-family: "Poppins", serif;
     opacity: .8;
     background-size: cover;
     background-position: center;
@@ -10,7 +10,7 @@
     justify-content: center;
     padding: 0 100px;
     gap: 10px;
-    color: #e2dcdc;
+   color: rgb(0, 0, 0);
     position: relative;
 }
 
@@ -22,7 +22,7 @@
     width: 100%;
     object-fit: cover;
     opacity: .6;
-    background-color: rgba(230, 217, 217, 0.5);
+    filter: grayscale(100%);
     z-index: -22;
 }
 
@@ -31,59 +31,89 @@
     position: relative;
 }
 
-.firstp::after {
-    content: '';
-    height: 2px;
-    width: 200px;
-    background: rgb(87, 192, 17);
-    position: absolute;
-    top: 50%;
-    right: 30%;
-}
 
 .upper h1 {
     font-size: 44px;
     font-weight: 600;
-    text-shadow: 0 0 10px green;
+    text-shadow: 0 0 10px rgb(29, 31, 29);
 }
 
 .secondp {
     position: relative;
     font-size: 19px;
-    text-shadow: 0 0 10px green;
+    text-shadow: 0 0 10px rgb(29, 31, 29);
+
 }
 
-.secondp::after {
-    content: '';
-    height: 2px;
-    width: 28%;
-    position: absolute;
-    background: green;
-    bottom: -4px;
-    left: 0;
-}
-
-.lower {
-    padding: 20px 10px;
+.lower{
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
+    align-items: center;
     justify-content: center;
-    background: rgb(204, 201, 201);
-
+    padding: 50px;
+    flex-wrap: wrap;
 }
-
-.lower img {
-    width: 500px;
+.lower a img{
+    width: 300px;
+    height: 400px;
     object-fit: cover;
-    filter: grayscale(100%);
-    transition: all 0.6s;
+    border-radius: 10px;
+    filter: grayscale(.8);
+    transition: .5s;
+}
+.lower a img:hover{
+  transform: scale(1.1);
+}
+.lower a{
+  text-decoration: none;
+  position: relative;
+}
+.lower a div{
+    position: absolute;
+    left: 30px;
+    width: 80%;
+    text-align: center;
+    bottom: 20px;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    border-radius: 5px; 
+    backdrop-filter: blur(1px); 
+    
+}
+.lower a  .icon{
+    font-size: 85px;
+    color: green;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.lower a div h1{
+    padding: 20px 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.lower img:hover {
-    transform: scale(1.06);
-    filter: grayscale(0);
-    border: 2px solid rgb(230, 230, 217);
+@media(max-width: 1100px){
+    .upper{
+        padding: 40px 60px;
+    }
+    .upper h1 {
+    font-size: 34px;
+    }
+}
+@media(max-width: 1100px){
+    .lower{
+        padding: 20px;
+    }
+}
+@media(max-width: 900px){
+    .upper{
+        padding: 40px 60px;
+    }
+    .upper h1 {
+    font-size: 28px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -124,7 +154,5 @@
         padding: 20px;
     }
 
-    .lower img {
-        width: 90%;
-    }
+   
 }
