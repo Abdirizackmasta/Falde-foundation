@@ -1,3 +1,5 @@
-git add .cpanel.yml
-git commit -m "Added cPanel deployment config"
-git push origin main
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
