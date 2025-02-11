@@ -1,0 +1,3 @@
+git add .cpanel.yml
+git commit -m "Added cPanel deployment config"
+git push origin main
