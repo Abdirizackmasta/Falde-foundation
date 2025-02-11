@@ -1,6 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/faldefou/public_html # Deploy directly inside public_html
-    - mkdir -p $DEPLOYPATH # Ensure the directory exists
-    - rsync -av --delete dist/ $DEPLOYPATH/ # Sync files from dist/ to public_html
-
+    - export DEPLOYPATH=/home/faldefou/public_html
+    - mkdir -p $DEPLOYPATH
+    - /bin/cp -r dist/* $DEPLOYPATH
