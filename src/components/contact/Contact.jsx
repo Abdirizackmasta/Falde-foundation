@@ -1,66 +1,127 @@
-import styles from './Contact.module.css'
-import { CgMailOpen } from "react-icons/cg";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { FaFacebookF, FaInstagram, FaLocationDot, FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import PageHero from "../PageHero/PageHero";
+import Reveal from "../Reveal";
+import styles from "./Contact.module.css";
 
+const EMAIL = "faldefoundation@gmail.com";
 
 function Contact() {
-    return (
-        <div className={styles.contact}>
-            <div className={styles.div_1}>
-                <img src="/contactus.jpeg" alt="" />
-                <h1>Contact  <span>us</span></h1>
-                <p>Send us your questions about membership, partnerships, events and more..</p>
-            </div>
-            <div className={styles.div_2}>
+  const [sent, setSent] = useState(false);
+
+  // There is no backend, so the form opens the visitor's email app with the
+  // message pre-filled and addressed to Falde Foundation.
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const subject = `${data.get("subject")} (from ${data.get("name")})`;
+    const body = `${data.get("message")}\n\n— ${data.get("name")}\n${data.get("email")}`;
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+  };
+
+  return (
+    <>
+      <PageHero
+        image="/contactus.jpeg"
+        eyebrow="Contact us"
+        title="Let’s start a conversation"
+        subtitle="Send us your questions about membership, partnerships, events and more."
+      />
+
+      <section className={`section ${styles.contact}`}>
+        <div className={`container ${styles.grid}`}>
+          <Reveal className={styles.info}>
+            <p className="eyebrow">Get in touch</p>
+            <h2>We’d love to hear from you</h2>
+            <p className={styles.lead}>
+              We are here to help and answer any question you might have. We
+              look forward to hearing from you.
+            </p>
+
+            <ul className={styles.cards}>
+              <li>
+                <a href={`mailto:${EMAIL}`}>
+                  <span className={styles.icon}><MdEmail aria-hidden="true" /></span>
+                  <span>
+                    <small>Email</small>
+                    {EMAIL}
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+254722778749">
+                  <span className={styles.icon}><FaPhone aria-hidden="true" /></span>
+                  <span>
+                    <small>Phone</small>
+                    +254 722 778749
+                  </span>
+                </a>
+              </li>
+              <li>
                 <div>
-                   <CgMailOpen className={styles.icon_div}/>
-                    <p>faldefoundation@gmail.com</p>
+                  <span className={styles.icon}><FaLocationDot aria-hidden="true" /></span>
+                  <span>
+                    <small>Headquarters</small>
+                    Nairobi, Kenya
+                  </span>
                 </div>
-                <div>
-                    <FaLocationDot className={styles.icon_div}/>
-                    <p>Nairobi, Kenya</p>
-                </div>
-                <div>
-                    <FaPhoneAlt className={styles.icon_div}/>
-                    <p>+254 722 778749</p>
-                </div>
+              </li>
+            </ul>
+
+            <div className={styles.socials}>
+              <a
+                href="https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Falde Foundation on Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com/falde_foundation/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Falde Foundation on Instagram"
+              >
+                <FaInstagram />
+              </a>
             </div>
-            <div className={styles.div_3}>
-                <div className={styles.div3_left}>
-                    <div className={styles.upperleft}>
-                        <p className={styles.upperleft_firstp}>Get In Touch</p>
-                        <h1>Love to hear from you</h1>
-                        <p className={styles.upperleft_secondp}>We are here to help and answer any question you might have. We look forward to hearing from you</p>
-                    </div>
-                    <div className={styles.leftLower}>
-                        <Link to='https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d'><FaFacebookF className={styles.lowericons}/></Link> 
-                        <Link to='https://www.instagram.com/falde_foundation/'><FaInstagram  className={styles.lowericons}/></Link> 
-                        <Link><FaXTwitter  className={styles.lowericons}/></Link> 
-                       
-                    </div>
-                </div>
-                <div className={styles.div3_right}>
-                    <form>
-                        <label>Your Name</label>
-                        <input type="text" required/>
-                        <label>Your Email</label>
-                        <input type="text" required/>
-                        <label>Subject</label>
-                        <input type="text" required/>
-                        <label>Your Message</label>
-                        <textarea></textarea>
-                        <button>submit</button>
-                    </form>
-                </div>
-            </div>
-            
+          </Reveal>
+
+          <Reveal className={styles.formWrap} delay={0.1}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <h3>Send us a message</h3>
+
+              <label htmlFor="name">Your name</label>
+              <input id="name" name="name" type="text" autoComplete="name" required />
+
+              <label htmlFor="email">Your email</label>
+              <input id="email" name="email" type="email" autoComplete="email" required />
+
+              <label htmlFor="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required />
+
+              <label htmlFor="message">Your message</label>
+              <textarea id="message" name="message" rows="6" required />
+
+              <button type="submit" className="btn btn-primary">
+                Send message
+              </button>
+              <p className={styles.note} role="status">
+                {sent
+                  ? "Your email app should open with your message ready to send."
+                  : "Sending opens your email app with the message ready to go."}
+              </p>
+            </form>
+          </Reveal>
         </div>
-    )
+      </section>
+    </>
+  );
 }
 
-export default Contact
+export default Contact;

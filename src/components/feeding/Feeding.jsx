@@ -1,4 +1,5 @@
 import styles from './Feeding.module.css';
+import { Link } from 'react-router-dom'
 function Feeding() {
     return (
        <div className={styles.container}>
@@ -7,12 +8,12 @@ function Feeding() {
                 <h1>Falde Foundation: Feeding the Community in Ijara Constituency</h1>
                 <span className={styles.time}>21st November 2024</span>
                 <p className={styles.logo_p}>
-                    <img src="./mainlogo.jpg" alt="" />
+                    <img src="/mainlogo.jpg" alt="" />
                     <span>Falde Foundation</span>
                 </p>
             </div>
             <div className={styles.lower}>
-                <img src="./madrasaa.jpg" alt="madarsa" />
+                <img src="/madrasaa.jpg" alt="" />
                 <p>
                     At Falde Foundation, we believe that no one should go to bed hungry, and we are steadfast in our mission to provide food security to the residents of Masalani town. Hunger and malnutrition not only affect individual well-being but also hinder the growth and development of communities. With this in mind, we have launched initiatives to ensure that families in need have access to nutritious meals.
                     <br /><br />
@@ -28,6 +29,9 @@ function Feeding() {
                      <br /><br />
                     #FaldeFoundation #FeedingTheCommunity #FoodSecurity #MasalaniCares #SustainableFutures
                 </p>
+            </div>
+            <div className={styles.back}>
+                <Link to="/latestactivities">&larr; Back to all activities</Link>
             </div>
         </div>
     )

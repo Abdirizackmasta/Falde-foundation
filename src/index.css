@@ -1,12 +1,223 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+/* ------------------------------------------------------------------
+   Falde Foundation – design tokens & global styles
+   ------------------------------------------------------------------ */
+:root {
+  --green-950: #0d2b1a;
+  --green-900: #143d26;
+  --green-800: #1a5133;
+  --green-700: #1f6b3d;
+  --green-600: #2a8a4f;
+  --green-500: #3ea664;
+  --green-100: #e0f0e5;
+  --green-50: #f0f7f2;
+
+  --plum-700: #6e2154;
+  --plum-600: #8a2a6a;
+  --plum-100: #f6e8f0;
+
+  --gold: #e3a93c;
+
+  --sand: #faf7f1;
+  --white: #ffffff;
+  --ink: #1b2420;
+  --muted: #5c6a63;
+  --line: #e6e2d8;
+
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+
+  --shadow-sm: 0 1px 2px rgba(20, 40, 28, 0.06), 0 2px 8px rgba(20, 40, 28, 0.06);
+  --shadow: 0 10px 30px rgba(20, 40, 28, 0.12);
+  --shadow-lg: 0 24px 60px rgba(20, 40, 28, 0.2);
+
+  --font-display: "Gloock", Georgia, "Times New Roman", serif;
+  --font-body: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --container: 1180px;
+  --gutter: clamp(20px, 5vw, 48px);
+  --header-h: 76px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: sans-serif;
-    overflow-x: hidden;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--sand);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--green-900);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection {
+  background: var(--green-600);
+  color: #fff;
+}
+
+/* ---------- shared building blocks (used via plain className) ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(56px, 9vw, 110px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--plum-600);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.eyebrow.light {
+  color: #f3d9a4;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--green-600);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(42, 138, 79, 0.35);
+}
+
+.btn-primary:hover {
+  background: var(--green-700);
+  box-shadow: 0 12px 26px rgba(31, 107, 61, 0.4);
+}
+
+.btn-plum {
+  background: var(--plum-600);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(138, 42, 106, 0.3);
+}
+
+.btn-plum:hover {
+  background: var(--plum-700);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--green-800);
+  border-color: var(--green-700);
+}
+
+.btn-outline:hover {
+  background: var(--green-700);
+  color: #fff;
+}
+
+.btn-ghost-light {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.btn-ghost-light:hover {
+  background: #fff;
+  color: var(--green-900);
+}
+
+.lead {
+  font-size: clamp(16px, 1.6vw, 18px);
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
