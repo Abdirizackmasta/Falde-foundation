@@ -1,38 +1,73 @@
-import styles from './Donate.module.css'
 import { FaInstagram } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
+import { FaCalendarDays, FaLocationDot } from "react-icons/fa6";
+import styles from "./Donate.module.css";
 
 function Donate() {
-    return (
-        <div className={styles.donate}>
-            <div className={styles.upper_div}>
-            <img src="/mainlogo.jpg" alt="logo" />
-            <p>We would like to cordially invite you <br />To the official launch of the Falde Foundation,<br /> which will be held at Nairobi Serena Hotel,<br /> on Sunday 5th May,<br /> 2024 From 12:30pm to 4pm.</p>
+  return (
+    <section className={`section ${styles.donate}`}>
+      <div className="container">
+        <div className={styles.invite}>
+          <div className={styles.upper}>
+            <img src="/mainlogo.jpg" alt="Falde Foundation" />
+            <p className="eyebrow">You’re invited</p>
+            <h1>Official launch of the Falde Foundation</h1>
+            <p className={styles.lead}>
+              We would like to cordially invite you to the official launch of
+              the Falde Foundation.
+            </p>
+            <ul className={styles.facts}>
+              <li>
+                <FaCalendarDays aria-hidden="true" />
+                <span>Sunday 5th May 2024 · 12:30pm – 4pm</span>
+              </li>
+              <li>
+                <FaLocationDot aria-hidden="true" />
+                <span>Nairobi Serena Hotel</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.lower}>
+            <div className={styles.block}>
+              <h2>Chief guest</h2>
+              <p className={styles.guest}>H.E Rigathi Gachagua</p>
+              <p className={styles.role}>Deputy President of the Republic of Kenya</p>
             </div>
-            <div className={styles.lower_div}>
-                <div className={styles.first}>
-                    <ul>
-                        <li>PAYBILL</li>
-                        <li className={styles.paybill}>247247</li>
-                        <li>ACCOUNT NO. 7887</li>
-                        <li>ACCOUNT NAME</li>
-                        <li>Falde Foundation</li>
-                    </ul>
+
+            <div className={styles.block}>
+              <h2>Give via M-Pesa</h2>
+              <dl className={styles.pay}>
+                <div>
+                  <dt>Paybill</dt>
+                  <dd>247247</dd>
                 </div>
-                <div className={styles.second}>
-                    <p>Chief Guest will be:</p>
-                    <h1>H.E Rigathi Gachagua</h1>
-                    <h1 className={styles.president}>Deputy President of the Republic of Kenya</h1>
-                    <p className={styles.social}><span><FaInstagram/></span><span>@faldefoundation</span></p>
-                    <p className={styles.social}><span><SiGmail /></span><span>@Faldefoundation@gmail.com</span></p>
+                <div>
+                  <dt>Account no.</dt>
+                  <dd>7887</dd>
                 </div>
-                <div className={styles.third}>
-                    <p>RSVP</p>
-                    <p>0722778749</p>
-                </div>
+              </dl>
+              <p className={styles.role}>Account name: Falde Foundation</p>
             </div>
+
+            <div className={styles.block}>
+              <h2>RSVP</h2>
+              <p className={styles.guest}>
+                <a href="tel:+254722778749">0722 778 749</a>
+              </p>
+              <p className={styles.social}>
+                <FaInstagram aria-hidden="true" /> @faldefoundation
+              </p>
+              <p className={styles.social}>
+                <SiGmail aria-hidden="true" />
+                <a href="mailto:faldefoundation@gmail.com">faldefoundation@gmail.com</a>
+              </p>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </section>
+  );
 }
 
-export default Donate
+export default Donate;

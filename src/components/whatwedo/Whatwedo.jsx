@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { FaChevronDown } from "react-icons/fa6";
+import Reveal from "../Reveal";
 import styles from "./Whatwedo.module.css";
 
 const focusArea = [
@@ -20,50 +20,76 @@ const focusArea = [
       "At our foundation, we passionately advocate for creating opportunities for vulnerable women in our society...",
   },
   {
-    head: "Championing for growth and development of the youth.",
+    head: "Championing for growth and development of the youth",
     description:
       "We believe that investing in the next generation is essential for building a brighter future...",
   },
   {
-    head: "Working to ensure that the voices of all groups of society are heard.",
+    head: "Working to ensure that the voices of all groups of society are heard",
     description:
       "At our foundation, we are dedicated to ensuring that the voices of all groups in society are heard and valued...",
   },
 ];
 
 function Whatwedo() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
 
   return (
-    <div className={styles.whatwedo} id="areaoffocus">
-      <div className={styles.left}>
-        <p className={styles.first_p}>What We Do</p>
-        <h1>Our Focus Area</h1>
-        <p className={styles.second_p}>
-          Falde Foundation is dedicated to fostering positive change through a multifaceted approach focused on environmental conservation, access to education, youth development, good governance, and the promotion of peace...
-        </p>
+    <section className={`section ${styles.whatwedo}`} id="areaoffocus">
+      <div className={`container ${styles.grid}`}>
+        <Reveal className={styles.intro}>
+          <p className="eyebrow">What we do</p>
+          <h2>Our focus areas</h2>
+          <p className={styles.lead}>
+            Falde Foundation is dedicated to fostering positive change through
+            a multifaceted approach focused on environmental conservation,
+            access to education, youth development, good governance, and the
+            promotion of peace.
+          </p>
+        </Reveal>
+
+        <Reveal className={styles.accordion} delay={0.1}>
+          {focusArea.map((item, index) => {
+            const open = openIndex === index;
+            return (
+              <div
+                key={item.head}
+                className={`${styles.item} ${open ? styles.item_open : ""}`}
+              >
+                <h3>
+                  <button
+                    type="button"
+                    className={styles.header}
+                    aria-expanded={open}
+                    aria-controls={`focus-panel-${index}`}
+                    id={`focus-header-${index}`}
+                    onClick={() => toggle(index)}
+                  >
+                    <span className={styles.num}>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className={styles.title}>{item.head}</span>
+                    <FaChevronDown className={styles.chevron} aria-hidden="true" />
+                  </button>
+                </h3>
+                <div
+                  id={`focus-panel-${index}`}
+                  role="region"
+                  aria-labelledby={`focus-header-${index}`}
+                  className={styles.panel}
+                >
+                  <div className={styles.panel_inner}>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </Reveal>
       </div>
-      <div className={styles.accordion}>
-        {focusArea.map((item, index) => (
-          <div key={index} className={styles.item}>
-            <div
-              className={styles.header}
-              onClick={() => toggleAccordion(index)}
-            >
-              {item.head}
-              <span>{openIndex === index ? "▲" : "▼"}</span>
-            </div>
-            <div className={`${styles.content} ${openIndex === index ? styles.open : ""}`}>
-              <p>{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }
 

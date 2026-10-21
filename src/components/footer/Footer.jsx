@@ -1,62 +1,84 @@
 import { IoCall } from "react-icons/io5";
 import { SiGmail } from "react-icons/si";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import { FaArrowDown } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
-import styles from './Footer.module.css'
+import { FaFacebookF, FaInstagram, FaHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import styles from "./Footer.module.css";
 
 function Footer() {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.upper_footer}>
-                <div className={styles.first}>
-                    <img src="./biggerLogo.png" alt="" />
-                    <p>Rebuilding Resilient, Stable and Cohensive Nation</p>
-                </div>
-                <div className={styles.second}>
-                    <h1>Quck Links</h1>
-                    <ul>
-                        <li><Link to='/team'>Our Team</Link></li>
-                        <li><Link to='/about'>About Us</Link></li>
-                        <li><Link to='/latestactivities'>Our Programms</Link></li>
-                        <li><Link to='/contact'>Contact Us</Link></li>
-                    </ul>
-                </div>
-                <div className={styles.third}>
-                    <h1>Contact</h1>
-                     <a href="tel:+254 722 778749">
-                        <span>< IoCall className={styles.icon}/></span>
-                        <span>+254 722 778749</span>
-                    </a>
-                    
+  return (
+    <footer className={styles.footer}>
+      <div className={`container ${styles.upper}`}>
+        <div className={styles.brand}>
+          <Link to="/" className={styles.logo} aria-label="Falde Foundation home">
+            <img src="/mainlogo.jpg" alt="Falde Foundation" />
+          </Link>
+          <p>Rebuilding a resilient, stable and cohesive nation.</p>
+          <div className={styles.socials}>
+            <a
+              href="https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Falde Foundation on Facebook"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/falde_foundation/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Falde Foundation on Instagram"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
 
-                    <a href="mailto:faldefoundation@gmail.com">
-                        <span>< SiGmail className={styles.icon}/></span>
-                        <span>faldefoundation@gmail.com</span>
-                    </a>
-                    
-                </div>
-                <div className={styles.fourth}>
-                    <p>Making a difference</p>
-                    <h1><FaArrowDown /></h1>
-                    <Link to='/donate'> <button><p>Donate Now</p><FaHeart  className={styles.heart} /></button></Link>
-                </div>
-            </div>
-            <div className={styles.lower_footer}>
-                <div>
-                    <p>{new Date().getFullYear()} – Falde Foundation – All rights reserved</p>
-                </div>
-                <div className={styles.lower_right}>
-                    <Link to='https://www.facebook.com/share/6oyZhwnxSRCXcNpT/?mibextid=LQQJ4d'><FaFacebookF /></Link>
-                    <Link to='https://www.instagram.com/falde_foundation/'><FaInstagram /></Link>
-                    <Link><BsTwitterX /></Link>
-                </div>
-            </div>
-        </footer>
-    )
+        <nav className={styles.col} aria-label="Quick links">
+          <h2>Quick links</h2>
+          <ul>
+            <li><Link to="/about">About us</Link></li>
+            <li><Link to="/team">Our team</Link></li>
+            <li><Link to="/latestactivities">Our programmes</Link></li>
+            <li><Link to="/upcoming">Events</Link></li>
+            <li><Link to="/contact">Contact us</Link></li>
+          </ul>
+        </nav>
+
+        <div className={styles.col}>
+          <h2>Contact</h2>
+          <ul className={styles.contact}>
+            <li>
+              <a href="tel:+254722778749">
+                <IoCall aria-hidden="true" />
+                <span>+254 722 778749</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:faldefoundation@gmail.com">
+                <SiGmail aria-hidden="true" />
+                <span>faldefoundation@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className={`${styles.col} ${styles.give}`}>
+          <h2>Making a difference</h2>
+          <p>Every contribution helps girls, women and youth in our region.</p>
+          <Link to="/donate" className="btn btn-primary">
+            Donate now <FaHeart aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+
+      <div className={`container ${styles.lower}`}>
+        <p>
+          © {new Date().getFullYear()} Falde Foundation. All rights reserved.
+        </p>
+        <p>Registered society · Nairobi, Kenya</p>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

@@ -1,49 +1,60 @@
 .loaderContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4; /* Background color */
+  gap: 28px;
+  min-height: 100vh;
+  background: #fff;
 }
 
-.loader {
-  position: relative;
-  width: 200px;
-  height: 200px;
+.logo {
+  width: min(260px, 60vw);
+  mix-blend-mode: multiply;
+  animation: fade 1s ease both;
 }
 
-.text {
-  font-size: 16px;
-  font-weight: bold;
-  color: #4caf50;
-  text-align: center;
+.bar {
+  width: 160px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--green-100);
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  width: 40%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green-600), var(--plum-600));
+  animation: slide 1s ease-in-out infinite;
+}
+
+.sr {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  max-width: 120px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
-.spinner {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid transparent;
-  border-top: 5px solid #4caf50; /* Spinner color */
-  border-right: 5px solid #4caf50;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
+@keyframes slide {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translateX(260%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

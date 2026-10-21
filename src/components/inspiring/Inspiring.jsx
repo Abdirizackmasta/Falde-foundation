@@ -1,4 +1,5 @@
 import styles from './Inspiring.module.css';
+import { Link } from 'react-router-dom'
 
 function Inspiring() {
     return (
@@ -8,12 +9,12 @@ function Inspiring() {
                 <h1>Falde Foundation: Mobilizing and Inspiring the Youth in Masalani</h1>
                 <span className={styles.time}>28st August 2024</span>
                 <p className={styles.logo_p}>
-                    <img src="./mainlogo.jpg" alt="" />
+                    <img src="/mainlogo.jpg" alt="" />
                     <span>Falde Foundation</span>
                 </p>
             </div>
             <div className={styles.lower}>
-                <img src="./withschoolgirls.jpeg" alt="madarsa" />
+                <img src="/withschoolgirls.jpeg" alt="" />
                 <p>
                    At Falde Foundation, we recognize that the youth are the driving force behind the future of Masalani town. With their energy, creativity, and potential, they hold the key to unlocking sustainable progress and meaningful change. Our mission is to empower, inspire, and mobilize young people to become proactive leaders and contributors to their community.
                     <br /> <br />
@@ -29,6 +30,9 @@ function Inspiring() {
                     <br /> <br />
                     #FaldeFoundation #YouthEmpowerment #InspiringYouth #MasalaniRising #LeadershipForTomorrow
                 </p>
+            </div>
+            <div className={styles.back}>
+                <Link to="/latestactivities">&larr; Back to all activities</Link>
             </div>
         </div>
     )

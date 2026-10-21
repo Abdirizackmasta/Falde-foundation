@@ -19,25 +19,24 @@ import Environmental from './components/environmental/Environmental';
 import Maradasa from './components/madarasa/Maradasa';
 import Inspiring from './components/inspiring/Inspiring';
 import Feeding from './components/feeding/Feeding';
+import NotFound from './components/notfound/NotFound';
 import ScrollToTop from './hooks/ScrollToTheTop';
 
-
 function App() {
-   const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 3000);
-    }, []);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
 
   return (
     <BrowserRouter>
-      <div>
-        {loading ? (<Loader />) : (
-          <main>
-
-        <Navbar />
-        <ScrollToTop />
+      <ScrollToTop />
+      <Navbar />
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -48,28 +47,25 @@ function App() {
           <Route path="/madarasa" element={<Maradasa />} />
           <Route path="/inspiring" element={<Inspiring />} />
           <Route path="/feeding-the-community" element={<Feeding />} />
-          <Route path='/upcoming' element={<Donate />}/>
-          <Route path='/donate' element={<TakePart />}/>
+          <Route path="/upcoming" element={<Donate />} />
+          <Route path="/donate" element={<TakePart />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-        
-          </main>
-            )
-        }
-      </div>
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }
 
 function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <Welcome />
       <Whatwedo />
-      <Founder />
       <Activities />
-    </div>
+      <Founder />
+    </>
   );
 }
 

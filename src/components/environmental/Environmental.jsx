@@ -1,4 +1,5 @@
 import styles from './Environmental.module.css'
+import { Link } from 'react-router-dom'
 
 function Environmental() {
     return (
@@ -8,14 +9,14 @@ function Environmental() {
                 <h1>Falde Foundation: Advancing Environmental Conservation in Masalani</h1>
                 <span className={styles.time}>22nd June 2024</span>
                 <p className={styles.logo_p}>
-                    <img src="./mainlogo.jpg" alt="" />
+                    <img src="/mainlogo.jpg" alt="" />
                     <span>Falde Foundation</span>
                 </p>
             </div>
             <div className={styles.lower}>
-                <img src="./treeplanting.jpeg" alt="madarsa" />
+                <img src="/treeplanting.jpeg" alt="madarsa" />
                 <p>
-                   At Falde Foundation, our dedication to fostering positive change extends to addressing one of the most critical challenges of our time—environmental conservation. In Masalani town, where natural beauty and resources are integral to the community's livelihood, we are committed to protecting and preserving the environment for future generations.
+                   At Falde Foundation, our dedication to fostering positive change extends to addressing one of the most critical challenges of our time—environmental conservation. In Masalani town, where natural beauty and resources are integral to the community&rsquo;s livelihood, we are committed to protecting and preserving the environment for future generations.
                     <br /> <br/>
                     In line with this mission, we have initiated impactful programs to combat deforestation, promote tree planting, and educate the community on sustainable environmental practices. Through our tree-planting campaigns, we have planted hundreds of trees in schools, public spaces, and arid lands, helping to restore degraded ecosystems and mitigate the effects of climate change.
                     <br /> <br/>
@@ -29,6 +30,9 @@ function Environmental() {
                     <br /> <br/>
                     #FaldeFoundation #EnvironmentalConservation #TreePlanting #Sustainability #ClimateAction
                 </p>
+            </div>
+            <div className={styles.back}>
+                <Link to="/latestactivities">&larr; Back to all activities</Link>
             </div>
         </div>
     )

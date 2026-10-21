@@ -1,4 +1,5 @@
 import styles from './Madarasa.module.css'
+import { Link } from 'react-router-dom'
 
 function Maradasa() {
     return (
@@ -8,12 +9,12 @@ function Maradasa() {
                 <h1>Empowering the Community Through Education: Falde Foundation’s Dedication to Learning and Growth</h1>
                 <span className={styles.time}>1st February 2025</span>
                 <p className={styles.logo_p}>
-                    <img src="./mainlogo.jpg" alt="" />
+                    <img src="/mainlogo.jpg" alt="" />
                     <span>Falde Foundation</span>
                 </p>
             </div>
             <div className={styles.lower}>
-                <img src="./madrasaa.jpg" alt="madarsa" />
+                <img src="/madrasaa.jpg" alt="" />
                 <p>
                     At Falde Foundation, we take immense pride in our unwavering commitment to fostering meaningful change in Masalani town by championing Islamic education as a pillar of empowerment and community development. Education is not just about knowledge—it is a tool for transformation, a beacon of hope, and a path to a brighter future.
                     <br /><br />
@@ -29,6 +30,9 @@ function Maradasa() {
                     <br /><br />
                     #FaldeFoundation #EmpoweringCommunities #EducationForAll #FaithAndKnowledge
                 </p>
+            </div>
+            <div className={styles.back}>
+                <Link to="/latestactivities">&larr; Back to all activities</Link>
             </div>
         </div>
     )

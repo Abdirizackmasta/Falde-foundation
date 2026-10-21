@@ -1,121 +1,145 @@
 .donate {
-    color: grey;
+  background: radial-gradient(900px 420px at 10% 0%, var(--green-100), transparent 70%),
+    var(--sand);
 }
 
-.upper_div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 70px;
-    text-align: center;
+.invite {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
 }
 
-
-.upper_div p {
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 28px;
+.upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(32px, 6vw, 64px) clamp(20px, 5vw, 56px);
+  border-bottom: 1px dashed var(--line);
 }
 
-.upper_div img {
-    width: 300px;
-    margin-bottom: 20px;
+.upper img {
+  width: 200px;
+  margin-bottom: 18px;
+  mix-blend-mode: multiply;
 }
 
-.lower_div {
-    display: flex;
-    gap: 40px;
-    margin: 10px auto;
-    align-items: center;
-    justify-content: center;
+.upper h1 {
+  margin: 14px 0 14px;
+  max-width: 18ch;
+  font-size: clamp(32px, 5vw, 54px);
+  text-wrap: balance;
 }
 
-.first ul {
-    list-style: none;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
+.lead {
+  max-width: 50ch;
+  color: var(--muted);
+  font-size: 17px;
 }
 
-.second {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
 }
 
-.second h1 {
-    font-size: 18px;
-    color: #000;
+.facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-weight: 600;
+  font-size: 14.5px;
 }
 
-.second .president {
-    position: relative;
+.lower {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.paybill {
-    position: relative;
+.block {
+  padding: clamp(24px, 3.5vw, 40px);
 }
 
-.paybill::after {
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: rgb(2, 2, 2);
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+.block + .block {
+  border-left: 1px solid var(--line);
 }
 
-.president::after {
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: palevioletred;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
+.block h2 {
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--plum-600);
 }
 
-.second p {
-    font-weight: 500;
-    color: grey;
+.guest {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--green-900);
+}
+
+.guest a {
+  text-decoration: none;
+}
+
+.role {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.pay {
+  display: flex;
+  gap: 24px;
+}
+
+.pay dt {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.pay dd {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--green-700);
 }
 
 .social {
-    display: flex;
-    justify-content: center;
-    vertical-align: text-top;
-    gap: 3px;
-    font-size: 17px;
-    border: 1px dashed grey;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 14.5px;
+  color: var(--muted);
+  word-break: break-word;
 }
 
-
-.third {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+.social svg {
+  flex-shrink: 0;
+  color: var(--green-700);
 }
 
-.third {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: bold;
-}
+@media (max-width: 860px) {
+  .lower {
+    grid-template-columns: 1fr;
+  }
 
-@media(max-width:768px) {
-    .lower_div {
-        flex-direction: column;
-    }
-
-    .second h1 {
-        font-weight: normal;
-    }
+  .block + .block {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
 }

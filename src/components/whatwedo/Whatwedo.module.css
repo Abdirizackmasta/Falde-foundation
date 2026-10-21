@@ -1,126 +1,146 @@
 .whatwedo {
-    display: flex;
-    justify-content: space-between;
-    padding: 80px 40px;
-    background: rgb(238, 237, 237);
-    font-family: "Poppins", serif;
-
+  background: var(--green-50);
+  border-block: 1px solid var(--green-100);
 }
 
-.left {
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-
+.grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
 }
 
-.first_p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    position: relative;
+.intro {
+  position: sticky;
+  top: calc(var(--header-h) + 32px);
 }
 
-.first_p::after {
-    content: '';
-    height: 2px;
-    width: 100px;
-    position: absolute;
-    top: 50%;
-    right: 42%;
-    background: green;
-
+.intro h2 {
+  margin: 16px 0 18px;
+  font-size: clamp(34px, 4.6vw, 54px);
 }
 
-.left h1 {
-    font-size: 50px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.second_p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 25px;
+.lead {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
 }
 
 .accordion {
-  flex-basis: 60%;
-  margin: 20px auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  display: grid;
+  gap: 12px;
 }
 
 .item {
-  border-bottom: 1px solid #ddd;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.item_open {
+  border-color: var(--green-500);
+  box-shadow: var(--shadow);
+}
+
+.item h3 {
+  font-family: var(--font-body);
+  font-size: inherit;
+  letter-spacing: 0;
 }
 
 .header {
-  padding: 20px 10px;
-  font-size: 18px;
-  text-transform: uppercase;
-  background-color: rgb(90, 179, 90);
-  color: #fff;
-  cursor: pointer;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: background 0.3s;
+  gap: 18px;
+  width: 100%;
+  padding: 20px 22px;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
 }
 
-.content {
+.num {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-weight: 700;
+  font-size: 14px;
+  transition: background 0.25s, color 0.25s;
+}
+
+.item_open .num {
+  background: var(--green-600);
+  color: #fff;
+}
+
+.title {
+  flex: 1;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--green-900);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--green-700);
+  transition: transform 0.3s;
+}
+
+.item_open .chevron {
+  transform: rotate(180deg);
+}
+
+/* height animation without a magic max-height number */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.item_open .panel {
+  grid-template-rows: 1fr;
+}
+
+.panel_inner {
   overflow: hidden;
-  background-color: #f9f9f9;
-  transition: max-height 0.3s ease-out, padding 0.3s;
-  max-height: 0;
-  padding: 0 15px;
 }
 
-.content.open {
-  max-height: 100px;
-  padding: 10px;
+.panel_inner p {
+  padding: 0 24px 22px 82px;
+  color: var(--muted);
+  line-height: 1.75;
 }
-@media(max-width: 900px) {
 
-    .whatwedo {
-        flex-direction: column;
-        padding: 20px;
-    }
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-    .first_p {
-        font-size: 15px;
-    }
+  .intro {
+    position: static;
+  }
+}
 
-    .second_p {
-        font-size: 15px;
-    }
+@media (max-width: 520px) {
+  .header {
+    padding: 16px;
+    gap: 14px;
+  }
 
-    .left {
-        gap: 4px;
-    }
+  .title {
+    font-size: 15.5px;
+  }
 
-    .left h1 {
-        font-size: 25px;
-    }
-
-    
-    .first_p::after {
-        width: 100%;
-        left: 0;
-        top: 100%;
-        bottom: -10px;
-    }
-
-    .left_icon {
-        left: 0;
-    }
-    .accordion{
-        width: 100%;
-    }
-    .accordion{
-        flex-basis: 100%;
-    }
+  .panel_inner p {
+    padding: 0 18px 20px 18px;
+  }
 }
